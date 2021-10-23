@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #addbook{
+            width:25%;
+            height:80%;
+            border:3px solid #f8f8f8;
+            position: absolute;
+            z-index: 999;
+            opacity: 1;
+            overflow: hidden;
+            background-color: yellowgreen;
+            text-align: center;
+            top: 0%;
+            left: 35%;
+            border-radius: 10px;
+        }
+        .text{
+            margin-top: 10px;
+            width:80%;
+            height:28px;
+            border-radius: 5px;
+            border: 0px;
+        }
+        .span{
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .btn{
+            margin-top: 15px;
+            font-weight: bold;
+            width:82.5%;
+            height: 35px;
+            background-color: #3BD9FF;
+            border-radius: 5px;
+            border: 0px;
+            color: green;
+        }
+    </style>
+    <script type="application/javascript" src="../first/jquery-3.6.0.min.js"></script>
+    <script type="application/javascript">
+      function add_book() {
+        $("#addbook").show();
+      }
+      function suit(){
+          $("#addbook").hide();
+      }
+  </script>
+</head>
+<body>
+<button onclick="add_book()">dasda</button>
+<div id="addbook" style="display: none">
+    <div class="span"><span >请添加书籍信息</span></div>
+    <div><input type="text" class="text" placeholder="&nbsp;状态"></div>
+    <div><input type="text" class="text" placeholder="&nbsp;书籍条码"></div>
+    <div><input type="text" class="text" placeholder="&nbsp;ISBN码"></div>
+    <div><input type="text" class="text" placeholder="&nbsp;书籍名称"></div>
+    <div><input type="text" class="text" placeholder="&nbsp;作者"></div>
+    <div><input type="text" class="text" placeholder="&nbsp;书籍分类"></div>
+    <div><input type="text" class="text" placeholder="&nbsp;语言"></div>
+    <div><input type="text" class="text" placeholder="&nbsp;评分参考"></div>
+    <div><input type="text" class="text" placeholder="&nbsp;书架"></div>
+    <div><input type="submit" class="btn" value="提&nbsp交" onclick="suit()"></div>
+</div>
+</body>
+</html>

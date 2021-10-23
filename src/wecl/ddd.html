@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rrr</title>
+    <script type="application/javascript" src="../first/jquery-3.6.0.min.js"></script>
+    <script type="application/javascript">
+        $(function (){
+            var d=document.getElementById("day");
+            for(var i=1;i<=30;i++){
+                d.options.add(new Option(i,i));
+            }
+            var m=document.getElementById("month");
+            for(var i=1;i<=12;i++){
+                m.options.add(new Option(i,i));
+            }
+            var y=document.getElementById("year");
+            for(var i=2015;i<=2021;i++){
+                y.options.add(new Option(i,i));
+            }
+        })
+    </script>
+</head>
+<body>
+<select class="year" id="year">
+    <option value="" disabled selected>year</option>
+</select>
+<select class="month" id="month">
+  <option value="" disabled selected>month</option>
+
+</select>
+<select class="day" id="day">
+    <option value="" disabled selected>day</option>
+</select>
+</body>
+</html>

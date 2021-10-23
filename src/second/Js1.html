@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易</title>
+<!--    <script type="application/javascript" src="../first/jquery-3.6.0.min.js"></script>-->
+    <style type="text/css">
+        body{
+            background-image: url("高山.jpg");
+            height: 100%;
+            background-size: 100% 100%;
+            margin: 0;
+        }
+        html{
+            height: 100%;
+            width: 100%;
+        }
+        @keyframes img1 {
+            /*from {background-color: red}*/
+            /*to {background-color: yellow}*/
+            0%{opacity: 100}
+            10%{opacity: 100}
+            40%{opacity: 0}
+            70%{opacity: 0}
+            100%{opacity: 0}
+        }
+        @keyframes img2 {
+            /*from {background-color: red}*/
+            /*to {background-color: yellow}*/
+            0%{opacity: 0}
+            40%{opacity: 100}
+            70%{opacity: 0}
+            100%{opacity: 0}
+        }
+        @keyframes img3 {
+            /*from {background-color: red}*/
+            /*to {background-color: yellow}*/
+            0%{opacity: 0}
+            40%{opacity: 0}
+            70%{opacity: 100}
+            100%{opacity: 0}
+        }
+        @keyframes img4 {
+            /*from {background-color: red}*/
+            /*to {background-color: yellow}*/
+            0%{opacity: 0}
+            40%{opacity: 0}
+            70%{opacity: 0}
+            100%{opacity: 100}
+        }
+        #img1{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            animation: img1 6s infinite;
+        }
+        #img2{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            animation: img2 6s infinite;
+        }
+        #img3{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            animation: img3 6s infinite;
+        }
+        #img4{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            animation: img4 6s infinite;
+        }
+    </style>
+    <script type="application/javascript">
+
+    </script>
+</head>
+<body>
+    <img src="日出.jpg" id="img1">
+    <img src="海边.jpg" id="img2">
+    <img src="草地.jpg" id="img3">
+    <img src="高山.jpg" id="img4">
+</body>
+</html>

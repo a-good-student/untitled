@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JQuery</title>
+  <style type="text/css">
+    div{
+      height: 100px;
+      width: 100px;
+      background-color: green;
+    }
+  </style>
+  <script type="application/javascript" src="jquery-3.6.0.min.js"></script>
+  <script type="application/javascript">
+    // show()将隐藏的元素显示
+    // hide()将可见的元素隐藏。
+    // toggle(1000,function(){alert("asd")})可见就隐藏，不可见就显示。
+    //以上方法第一个参数是毫秒，控制执行时间，第二个参数是回调函数，在方法完成后执行
+
+
+    // 淡入淡出动画
+    // fadeln()
+    // fadeOut()
+    // fadeTo()
+    // fadeToggle()
+    //有三个参数，时间，透明度(0.5是半透明)，回调函数
+    $(function (){
+      //其中的数字代表毫秒
+      $("#btn1").click(function (){
+        $("#div1").show(1000)//显示
+      })
+      $("#btn2").click(function (){
+        $("#div1").hide(1000)//隐藏
+      })
+      $("#btn3").click(function (){
+        $("#div1").toggle(1500)
+      })
+      $("#btn4").click(function (){
+        $("#div1").fadeIn(1000)
+      })
+      $("#btn5").click(function (){
+        $("#div1").fadeOut(1000)
+      })
+      $("#btn6").click(function (){
+        $("#div1").fadeTo(1000,0.5)
+      })
+      $("#btn7").click(function (){
+        $("#div1").fadeToggle(1500)
+      })
+      $("#btn8").click(function (){
+        $("#div1").toggle(1500,function (){
+          abc1()
+        })
+      })
+      function abc1(){
+        $("#div1").toggle(1500,abc)
+      }
+      $("#btn9").click(function (){
+        $("#div1").fadeToggle(1500,function (){
+          abc2()
+        })
+      })
+      function abc2(){
+        $("#div1").fadeToggle(1500,abc2)
+      }
+    })
+  </script>
+</head>
+<body>
+<table>
+  <tr>
+    <td><button id="btn1">显示show()</button></td>
+  </tr>
+  <tr>
+    <td><button id="btn2">隐藏hide()</button></td>
+  </tr>
+  <tr>
+    <td><button id="btn3">显示/隐藏切换toggle()</button></td>
+  </tr>
+  <tr>
+    <td><button id="btn4">淡入fadeIn()</button></td>
+  </tr>
+  <tr>
+    <td><button id="btn5">淡出fadeOut()</button></td>
+  </tr>
+  <tr>
+    <td><button id="btn6">淡化到fadeTo()</button></td>
+  </tr>
+  <tr>
+    <td><button id="btn7">淡化切换fadeToggle()</button></td>
+  </tr>
+  <tr>
+    <td><button id="btn8">反复显示/隐藏切换toggle()</button></td>
+  </tr>
+  <tr>
+    <td><button id="btn9">反复淡化切换fadeToggle()</button></td>
+  </tr>
+</table>
+<div id="div1">方便演示</div>
+
+</body>
+</html>

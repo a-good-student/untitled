@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="application/javascript" src="../first/jquery-3.6.0.min.js"></script>
+<script type="application/javascript">
+
+</script>
+<style>
+    .btnCloseInner {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 12px;
+        right: 17px;
+        transition: .25s;
+    }
+
+    .btnCloseInner::after,.btnCloseInner::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        transition: .25s
+    }
+
+    .btnCloseInner::before {
+        transform: rotate(45deg);
+        background-color: red;
+    }
+
+    .btnCloseInner::after {
+        transform: rotate(-45deg);
+        background-color: red;
+    }
+
+</style>
+<body>
+<span class="btnCloseInner"></span>
+</body>
+</html>

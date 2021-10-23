@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>asd</title>
+    <script type="application/javascript" src="../first/jquery-3.6.0.min.js"></script>
+  <script type="application/javascript">
+    function kk(){
+      // var s=document.getElementsByName("text");
+      // var book="";
+      // for(var i=0;i<s.length;i++){
+      //   if(s[i].checked){
+      //     book+=s[i].value;
+      //   }
+      // }
+            $("input[name='text']:checked").each(function() { // 遍历选中的checkbox
+                n = $(this).parents("tr").index();  // 获取checkbox所在行的顺序
+                $("table#test_table").find("tr:eq("+n+")").remove();
+                window.location
+            });
+    }
+  </script>
+</head>
+<body>
+<table id="test_table">
+    <tr>
+        <td><input type="checkbox" name="text"><span>1</span></td>
+        <td><span>as</span></td>
+        <td><span>asdasda</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="text"><span>2</span></td>
+        <td><span>zzzz</span></td>
+        <td><span>tttt</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="text" value="1"></td>
+        <td><span>111</span></td>
+        <td><span>222</span></td>
+    </tr>
+</table>
+<input type="button" value="选择" onclick="kk()">
+</body>
+</html>

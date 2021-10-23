@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style type="text/css">
+    .style-table {
+      border-collapse: collapse;
+      margin: 50px auto;
+      font-size: 0.9em;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .style-table thead tr {
+      background-color: #0398dd;
+      color: #ffffff;
+      text-align: left;
+    }
+
+    .style-table th,
+    .style-table td {
+      padding: 12px 15px;
+    }
+
+    .style-table tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .style-table tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    .style-table tbody tr:last-of-type {
+      border-bottom: 2px solid #0398dd;
+    }
+
+    .style-table tbody tr.active-row {
+      font-weight: bold;
+      color: #0398dd;
+    }
+  </style>
+  <script type="application/javascript">
+
+  </script>
+</head>
+<body>
+<table class="style-table">
+  <thead>
+  <tr> <th>序号</th> <th>物品名称</th> <th>金额</th> <th>备注</th></tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1</td>
+    <td>洗衣粉</td>
+    <td>15.00</td>
+    <td>自己用</td> </tr>
+  <tr class="active-row"> <td>2</td> <td>洁尔阴</td> <td>25.00</td> <td>老婆用</td> </tr>
+  <tr >
+    <td>3</td>
+    <td>搓衣板</td>
+    <td>5.00</td>
+    <td>自己用</td>
+  </tr>
+  </tbody>
+</table>
+
+
+</body>
+</html>

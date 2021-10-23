@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>图书</title>
+    <style type="text/css">
+        body{
+            background-color: rgba(240, 255, 255, 0.5);/*透明效果*/
+        }
+        #bookshelf{
+            width: 98%;
+            min-height: 98%;
+            line-height: 25px;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 0.9em;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        #bookshelf thead tr {
+            background-color: #0398dd;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        #bookshelf th,
+        #bookshelf td {
+            padding: 12px 15px;
+        }
+
+        #bookshelf tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #bookshelf tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        #bookshelf tbody tr:last-of-type {
+            border-bottom: 2px solid #0398dd;
+        }
+        #isborrow{
+            font-weight: bold;
+            color: springgreen;
+        }
+
+    </style>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/json2.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            /* var e="三国演义";
+            window.location.href = "${pageContext.request.contextPath}/searchbook?bname=" + e; */
+            //ajax牛逼，完美解决，页面加载函数发送请求，接收后台返回数据刷新页面，导致的死循环，一直重复请求，重复刷新页面
+
+    </script>
+</head>
+<body>
+
+<table id="bookshelf">
+
+    <thead>
+
+    <tr>
+        <th>状态</th>
+        <th>书籍条码</th>
+        <th>ISBN码</th>
+        <th>书籍名称</th>
+        <th>作者</th>
+        <th>书籍分类</th>
+        <th>语言</th>
+        <th>评分参考</th>
+        <th>书架</th>
+    </tr>
+    </thead>
+    <tbody id="dictTableBody">
+    <th id="isborrow">状态</th>
+    <th>书籍条码</th>
+    <th>ISBN码</th>
+    <th>书籍名称</th>
+    <th>作者</th>
+    <th>书籍分类</th>
+    <th>语言</th>
+    <th>评分参考</th>
+    <th>书架</th>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>功能界面</title>
+</head>
+<style>
+  html,body{
+    height: 100%;
+    background-size: 100% 100%;
+    margin: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+  #outer,ul,li,h2{
+    padding:0;
+    margin: 0;
+  }
+  body{font:12px/1.5 Tahoma;}
+  ul{list-style-type:none;}
+  #outer{width:100%;border:1px solid #aaa;margin:10px auto;}
+  #outer h2{cursor:pointer;color:#57646E;font-size:14px;font-weight:400;border:1px solid;height:30px;line-height:30px;padding-left:10px;background:#ced3d7 180px 15px no-repeat;border-color:#fff #e9edf2;}
+  #outer h2.open{background-position:180px -12px;}
+  #outer ul{border-top:1px solid #DEE3E6;}
+  #outer li{height:25px;line-height:25px;vertical-align:top;}
+  #outer a{display:block;color:#6b7980;background:#e9edf2;text-decoration:none;padding:0 10px;}
+  #outer a:hover{background:#fff;text-decoration:underline;}
+  #outer,h2,ul,li{
+    border: 0px solid snow;
+  }
+  #outer{
+    position: absolute;
+    top:10%;
+    left:0.1%;
+    background-color: rgba(240, 255, 255, 0.5);
+  }
+  #div_code{
+    position: absolute;
+    top:0%;
+    left:0%;
+    width: 15.7%;
+    height: 100%;
+    background-color: #aaaaaa;
+  }
+  #div_sign{
+    background-color: #414B54;
+    width: 100%;
+    height:11.8%;
+    vertical-align: middle;
+    line-height: 64px;
+  }
+  #library{
+    font-weight: bold;
+    font-size: 200%;
+    font-family: 楷体;
+    text-align: center;
+    color: #e9edf2;
+  }
+  #div_top{
+    position: absolute;
+    background-color: #57646E;
+    width: 100%;
+    height:11.8%;
+    top:0%;
+  }
+  #fun-view{
+    position: absolute;
+    top:11.8%;
+    left: 15.7%;
+    width: 84%;
+    height: 87.5%;
+    background-color: white;
+    border: 1px;
+  }
+</style>
+<script>
+  window.onload = function ()
+  {
+    var oH2 = document.getElementsByTagName("h2")[0];
+    var oUl = document.getElementsByTagName("ul")[0];
+    oH2.onclick = function ()
+    {
+      var style = oUl.style;
+      style.display = style.display == "none" ? "block" : "none";
+      oH2.className = style.display == "none" ? "open" : ""
+    }
+  }
+</script>
+<body>
+<div id="div_top">
+  <span></span>
+</div>
+<div id="div_code">
+  <div id="div_sign" align="center">
+    <span id="library">图书管理系统</span>
+  </div>
+  <div id="outer">
+    <h2>功能列表...</h2>
+    <ul>
+      <li><a href="../素材/日出.jpg" target="iframe">公告</a></li>
+      <li><a href="../素材/草地.jpg" target="iframe">图书信息</a></li>
+      <li><a href="../素材/高山.jpg" target="iframe">借书记录</a></li>
+      <li><a href="../素材/海边.jpg" target="iframe">还书记录</a></li>
+      <li><a href="library.jpg" target="iframe">借阅</a></li>
+      <li><a href="javascript:;">其他</a></li>
+    </ul>
+  </div>
+</div>
+<iframe id="fun-view" src="library.jpg" name="iframe"></iframe>
+</body>
+</html>

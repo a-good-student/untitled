@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习一下</title>
+    <script type="application/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="application/javascript">
+        $(function (){
+            $("#btn").click(function (){
+                $("span").toggle(1500,function (){
+                    abc()
+                })
+            })
+            $("div").fadeToggle()
+        })
+        function abc(){
+            $("span").toggle(1500,abc)
+        }
+    </script>
+</head>
+<body>
+    <a>sad</a>
+    <div>显示</div>
+    <button id="btn"><span style="display: none">出现</span><span>消失</span></button>
+</body>
+</html>
